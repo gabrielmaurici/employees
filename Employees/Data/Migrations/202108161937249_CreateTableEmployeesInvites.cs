@@ -19,21 +19,10 @@
                     })
                 .PrimaryKey(t => t.Id);
             
-            DropTable("dbo.Teams");
         }
         
         public override void Down()
         {
-            CreateTable(
-                "dbo.Teams",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(),
-                        AmountPeople = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => t.Id);
-            
             DropTable("dbo.EmployeesInvites");
         }
     }
