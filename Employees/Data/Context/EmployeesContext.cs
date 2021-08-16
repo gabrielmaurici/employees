@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -9,6 +10,7 @@ namespace Data.Context
 {
     class EmployeesContext : DbContext
     {
+        public DbSet<Team> Teams { get; set; }
         public EmployeesContext() : base("Data Source = 192.168.0.172; Initial Catalog = Employees; Persist Security Info=True;User ID = Employees; Password=123321@")
         {
 
