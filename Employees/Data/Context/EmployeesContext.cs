@@ -9,7 +9,7 @@ namespace Data.Context
 {
     class EmployeesContext : DbContext
     {
-        public EmployeesContext() : base("Data Source = 192.168.0.172; Initial Catalog = Employees; Persist Security Info=True;User ID = Employees; Password=***********")
+        public EmployeesContext() : base("Data Source = 192.168.0.172; Initial Catalog = Employees; Persist Security Info=True;User ID = Employees; Password=123321@")
         {
 
         }
