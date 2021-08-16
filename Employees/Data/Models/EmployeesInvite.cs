@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Data.Models
 {
-    public class EmployeesInvite
+    public class EmployeesInvite : Base
     {
         public string State { get; set; }
         public string Description { get; set; }
