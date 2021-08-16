@@ -10,5 +10,7 @@ namespace Data.Models
     {
         public string State { get; set; }
         public string Description { get; set; }
+        public string Fullname { get; set; }
+        public string EmailAdress { get; set; }
     }
 }
