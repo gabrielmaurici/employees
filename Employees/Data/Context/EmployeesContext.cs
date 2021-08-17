@@ -13,6 +13,7 @@ namespace Data.Context
         public DbSet<Team> Teams { get; set; }
         public DbSet<EmployeesInvite> EmployeesInvites { get; set; }
         public DbSet<Profile> Profile { get; set; }
+        public DbSet<Position> Positions { get; set; }
         public EmployeesContext() : base("Data Source = 192.168.0.172; Initial Catalog = Employees; Persist Security Info=True;User ID = Employees; Password=123321@")
         {
 
