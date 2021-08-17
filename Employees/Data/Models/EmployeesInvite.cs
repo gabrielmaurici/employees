@@ -12,5 +12,9 @@ namespace Data.Models
         public string Description { get; set; }
         public string Fullname { get; set; }
         public string EmailAdress { get; set; }
+
+        public Team Team { get; set; }
+        public Profile Profile { get; set; }
+        public Position Position { get; set; }
     }
 }
