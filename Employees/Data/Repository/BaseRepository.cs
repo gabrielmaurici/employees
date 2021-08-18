@@ -11,7 +11,7 @@ namespace Data.Repository
 {
     public abstract class BaseRepository <T> where T : Base
     {
-        public void Create(T model)
+        public virtual void Create(T model)
         {
             using (var context = new EmployeesContext())
             {
@@ -19,7 +19,7 @@ namespace Data.Repository
                 context.SaveChanges();
             }
         }
-        public List<T> Read()
+        public virtual List<T> Read()
         {
             List<T> Lista = new List<T>();
             using (var context = new EmployeesContext())
@@ -28,16 +28,16 @@ namespace Data.Repository
             }
             return Lista;
         }
-        public T Read(int id)
+        public virtual T Read(int id)
         {
-            T model;
+            T model = Activator.CreateInstance<T>();
             using (var context = new EmployeesContext())
             {
                 model = context.Set<T>().Find(id);
             }
             return model;
         }
-        public void Update(T model)
+        public virtual void Update(T model)
         {
             using (var context = new EmployeesContext())
             {
@@ -45,7 +45,7 @@ namespace Data.Repository
                 context.SaveChanges();
             }
         }
-        public void Delete(int id)
+        public virtual void Delete(int id)
         {
             using (var context = new EmployeesContext())
             {
